@@ -5,12 +5,12 @@ export default class Adminpanel extends Component {
 
     MainPage = () => {
         document.getElementById("Zag1").value = 3
-        document.getElementById("Text1").value = 3
+        document.getElementById("Text1").value = 5
     }
 
     SecondPage = () => {
         document.getElementById("Zag2").value = 2
-        document.getElementById("Text2").value = 2
+        document.getElementById("Text2").value = 5
     }
 
     ThirdPage = () => {
