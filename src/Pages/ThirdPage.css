@@ -1,0 +1,21 @@
+.Third-zag {
+    font-size: 2em;
+    background-color: rgb(44, 157, 177);
+    border-radius: 5px;
+    padding: 5px;
+    text-align: center;
+    margin-left: 500px;
+    margin-right: 500px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.Third-div {
+    text-align: center;
+}
+
+.Third-text {
+    background-color:#9ACD32;
+    padding: 10px;
+    border-radius: 5px;
+}
