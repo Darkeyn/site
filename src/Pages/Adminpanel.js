@@ -4,7 +4,7 @@ import { Container, Col, Tab, Nav, Row, Form } from 'react-bootstrap'
 export default class Adminpanel extends Component {
 
     MainPage = () => {
-        document.getElementById("Zag1").value = 3
+        document.getElementById("Zag1").value = 6
         document.getElementById("Text1").value = 5
     }
 
