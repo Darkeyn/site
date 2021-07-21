@@ -1,15 +1,15 @@
 import React, {Component, useState} from 'react'
 import "./SecondPage.css"
+import TextSecond from './TextSecond'
+import ZagSecond from './ZagSecond'
 
 
 function Second(){
 
         return(
             <div className="Second-div">
-            <h1 className="Second-zag">    Заголовок второй страницы    </h1>
-            <text className="Second-text">
-                Текст второй страницы
-            </text>
+            <ZagSecond/>
+            <TextSecond/>
             </div>
         )
     

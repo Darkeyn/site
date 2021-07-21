@@ -1,16 +1,20 @@
 import React, {Component} from 'react'
 import image from "../Image/icon.png";
+import AMain from './AMain';
 import "./MainPage.css"
-
+import MainZag from './MainZag';
+import TextMain from './TextMain';
 
 export default class Main extends Component {
 
 
     render() {
+
+
         return(
             <div className="Main-div">
-            <h1 className="Main-zag">    Заголовок главной страницы    </h1>
-            <a href="/" className="Main-a"> Ссылка на главную страницу </a>
+                <MainZag/>
+                <AMain/>
             <h2> </h2>
             <img
                 src={image}
@@ -20,9 +24,7 @@ export default class Main extends Component {
                 alt="Img"
             />
             <h3> </h3>
-            <text className="Main-text">
-                Текст главной страницы
-            </text>
+            <TextMain/>
         </div>
         )
     }
