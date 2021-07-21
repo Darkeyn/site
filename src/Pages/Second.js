@@ -1,8 +1,9 @@
-import React, {Component} from 'react'
+import React, {Component, useState} from 'react'
 import "./SecondPage.css"
 
-export default class Second extends Component {
-    render() {
+
+function Second(){
+
         return(
             <div className="Second-div">
             <h1 className="Second-zag">    Заголовок второй страницы    </h1>
@@ -11,5 +12,7 @@ export default class Second extends Component {
             </text>
             </div>
         )
-    }
+    
 }
+
+export default Second

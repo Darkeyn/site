@@ -1,11 +1,26 @@
-import React, {Component} from 'react'
+import React, { Component } from 'react'
 import { Container, Col, Tab, Nav, Row, Form } from 'react-bootstrap'
+import axios from 'axios'
+import { ref } from 'react'
 
 export default class Adminpanel extends Component {
 
+
+    constructor(props) {
+        super(props);
+        this.zag = null;
+        this.a = null;
+        this.adress = null;
+        this.text = null;
+    }
+
     MainPage = () => {
-        document.getElementById("Zag1").value = 6
+
+
+
+        document.getElementById("Zag1").value = 5
         document.getElementById("Text1").value = 5
+
     }
 
     SecondPage = () => {
@@ -18,8 +33,11 @@ export default class Adminpanel extends Component {
         document.getElementById("Text3").value = 3
     }
 
+
+
+
     render() {
-        return(
+        return (
             <Container>
                 <Tab.Container id="ledt-tabs-example" defaultActiveKey="fir">
                     <Row>
@@ -41,13 +59,13 @@ export default class Adminpanel extends Component {
                                 <Tab.Pane eventKey="first">
                                     <br></br>
                                     <Form.Label>Заголовок главной страницы:</Form.Label>
-                                    <Form.Control type="text" id="Zag1"/>
+                                    <Form.Control type="text" id="Zag1" ref={ref => this.zag = ref} />
                                     <br></br>
                                     <Form.Label>Наименование ссылки главной страницы:</Form.Label>
-                                    <Form.Control type="text" id="A1"/>
+                                    <Form.Control type="text" id="A1" ref={ref => this.a = ref} />
                                     <br></br>
                                     <Form.Label>Адрес ссылки главной страницы:</Form.Label>
-                                    <Form.Control type="text" id="Ad1"/>
+                                    <Form.Control type="text" id="Ad1" ref={ref => this.adress = ref} />
                                     <br></br>
                                     <Form.Group controlId="formFile" className="mb-3">
                                         <Form.Label>Картинка на главной странице:</Form.Label>
@@ -56,27 +74,29 @@ export default class Adminpanel extends Component {
                                     </Form.Group>
                                     <br></br>
                                     <Form.Label>Текст главной страницы страницы:</Form.Label>
-                                    <Form.Control as="textarea" rows={3} id="Text1"/>
+                                    <Form.Control as="textarea" rows={3} id="Text1" ref={ref => this.text = ref} />
                                     <br></br>
-                                    <button onClick={this.MainPage}> Применить изменения </button>
+                                    <button type="submit" onClick={(e) => {
+                                        console.log(`login: ${this.zag.value}, password: ${this.a.value}`)
+                                    }}> Применить изменения </button>
                                 </Tab.Pane>
                                 <Tab.Pane eventKey="second">
                                     <br></br>
                                     <Form.Label>Заголовок второй страницы:</Form.Label>
-                                    <Form.Control type="text" id="Zag2"/>
+                                    <Form.Control type="text" id="Zag2" />
                                     <br></br>
                                     <Form.Label>Текст второй страницы:</Form.Label>
-                                    <Form.Control as="textarea" rows={3} id="Text2"/>
+                                    <Form.Control as="textarea" rows={3} id="Text2" />
                                     <br></br>
                                     <button onClick={this.SecondPage}> Применить изменения </button>
                                 </Tab.Pane>
                                 <Tab.Pane eventKey="third">
                                     <br></br>
                                     <Form.Label>Заголовок третьей страницы:</Form.Label>
-                                    <Form.Control type="text" id="Zag3"/>
+                                    <Form.Control type="text" id="Zag3" />
                                     <br></br>
                                     <Form.Label>Текст третьей страницы:</Form.Label>
-                                    <Form.Control as="textarea" rows={3} id="Text3"/>
+                                    <Form.Control as="textarea" rows={3} id="Text3" />
                                     <br></br>
                                     <button onClick={this.ThirdPage}> Применить изменения </button>
                                 </Tab.Pane>
